@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router";
 import { getGames } from "@/api/gameService";
 
 export default function ListGame() {
@@ -19,7 +20,11 @@ export default function ListGame() {
       <h1 className="text-2xl font-bold mb-4">ListGame</h1>
       <ul className="space-y-2">
         {games.map((game) => (
-          <li key={game.id}>{game.title} — {game.ageRating}</li>
+          <li key={game.id}>
+            <Link to={`/games/${game.id}`} className="text-blue-600 hover:underline">
+              {game.title} — {game.ageRating}
+            </Link>
+          </li>
         ))}
       </ul>
     </div>
