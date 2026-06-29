@@ -1,0 +1,39 @@
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Game {
+  id              Int      @id @default(autoincrement())
+  title           String   @db.VarChar(255)
+  ageRating       String   @db.VarChar(50)
+  publisher       String   @db.VarChar(255)
+  coverImage      String   @db.VarChar(255)
+  description     String   @db.Text
+  contentWarnings Json     // Array of strings (e.g. ["Violence", "Blood"])
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model GameRequest {
+  id              Int      @id @default(autoincrement())
+  title           String   @db.VarChar(255)
+  publisher       String   @db.VarChar(255)
+  description     String   @db.Text
+  email           String?  @db.VarChar(255)
+  status          String   @default("PENDING") // PENDING, APPROVED, REJECTED
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model Suggestion {
+  id              Int      @id @default(autoincrement())
+  gameId          Int?
+  feedback        String   @db.Text
+  email           String?  @db.VarChar(255)
+  createdAt       DateTime @default(now())
+}
