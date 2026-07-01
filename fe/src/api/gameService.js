@@ -1,5 +1,5 @@
 import { apiClient } from "./client";
-import { mockGames } from "./mockData/games";
+import { mockGames } from "./mock/games";
 
 export async function getGames() {
   try {
