@@ -35,7 +35,7 @@ export default function Footer() {
               Permainan Interaktif Elektronik (PIE) atau game berdasarkan konten
               dan kelompok usia pengguna.
             </p>
-            <div>
+            <div className="flex">
               <p className="text-sm text-gray-400 mb-2">Didukung oleh :</p>
               <img src="/balai1.png" alt="Balai Sertifikasi Elektronik" className="h-10 w-auto" />
             </div>

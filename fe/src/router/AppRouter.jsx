@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router";
 import Layout from "@/components/layout/Layout";
 import HomePage from "@/pages/HomePage";
+import AboutPage from "@/pages/AboutPage";
 import ListGame from "@/pages/ListGame";
 import DetailPage from "@/pages/DetailPage";
 import RatingInformation from "@/pages/RatingInformation";
@@ -13,6 +14,7 @@ export default function AppRouter() {
     <Routes>
       <Route element={<Layout />}>
         <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
         <Route path="/games" element={<ListGame />} />
         <Route path="/games/:id" element={<DetailPage />} />
         <Route path="/rating-info" element={<RatingInformation />} />

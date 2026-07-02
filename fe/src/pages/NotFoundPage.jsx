@@ -6,7 +6,7 @@ export default function NotFoundPage() {
       <h1 className="text-6xl font-bold text-gray-300 mb-2">404</h1>
       <p className="text-xl font-semibold mb-2">Halaman tidak ditemukan</p>
       <p className="text-gray-600 max-w-md mb-6">
-        Halaman yang kamu cari mungkin sudah dipindah, dihapus, atau memang
+        Halaman yang kamu cari mungkin sudah dipindah, dihapus, sedang dalam perbaikan atau memang
         tidak pernah ada.
       </p>
       <Link
